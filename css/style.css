@@ -420,12 +420,18 @@ span.lb-number {
 
 .subtitle {
     margin-top: 5px;
-    font-size: 14px;
+    font-size: 12px;
     background: #00000059;
     border-radius: 1px;
     font-weight: 100;
-    min-height: 42px;
-    padding: 10px 3px;
+    padding: 3px;
+}
+
+.subtitle span {
+    display: table-cell;
+    width: 160px;
+    height: 40px;
+    vertical-align: middle;
 }
 
 
