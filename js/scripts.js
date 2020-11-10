@@ -231,6 +231,19 @@ function gotofebrero(mes){
   }, 700);
 }
 
+function gotomarzo(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('marzo').classList.add("pt-page-current");
+  document.getElementById('marzo').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('marzo').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -254,6 +267,19 @@ function volverfebrero(){
     document.getElementById('febrero').classList.remove("pt-page-current");
     document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
     document.getElementById('febrero').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+
+function volvermarzo(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('marzo').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('marzo').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('marzo').classList.remove("pt-page-moveToRight");
   }, 700);
 }
 
@@ -284,6 +310,19 @@ function volver2(mysample){
       document.getElementById('page3').classList.remove("pt-page-moveToRight");
     }, 700);
   }
+
+  if(mysample == "marzo"){
+    document.getElementById('marzo').classList.add("pt-page-current");
+    document.getElementById('marzo').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('marzo').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('marzo').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
 }
 
 
@@ -292,6 +331,7 @@ function step3(url){
   document.getElementById('iframepage2').src = url;
   document.getElementById('enero').classList.add("pt-page-moveToLeft");
   document.getElementById('febrero').classList.add("pt-page-moveToLeft");
+  document.getElementById('marzo').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -300,6 +340,8 @@ function step3(url){
     document.getElementById('enero').classList.remove("pt-page-moveToLeft");
     document.getElementById('febrero').classList.remove("pt-page-current");
     document.getElementById('febrero').classList.remove("pt-page-moveToLeft");
+    document.getElementById('marzo').classList.remove("pt-page-current");
+    document.getElementById('marzo').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }

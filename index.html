@@ -31,7 +31,7 @@
 
                   <!-- Optional: some overlay text to describe the video -->
                   <div class="">
-                    <div class="container page1" id="page1">
+                    <div class="container page1" id="page11">
                         <div class="row">
                             <div class="col-lg-12 text-center logoba">
                                 <img src="img/balogo.svg" alt="" width="">
@@ -45,7 +45,7 @@
                                 <img src="img/febrero.png" alt="" width="" onclick="gotofebrero('bgfebrero2.jpg'); javascript:setval('febrero')">
                             </div>
                             <div class="col-lg-2 text-center">
-                                <img src="img/marzo.png" alt="" width="">
+                                <img src="img/marzo.png"  alt="" width="" onclick="gotomarzo('bgfebrero2.jpg'); javascript:setval('febrero')">
                             </div>
                             <div class="col-lg-2 text-center">
                                 <img src="img/abril.png" alt="" width="">
@@ -203,7 +203,46 @@
                   </div>
                 </div>
             </div>
-
+            <div class="pt-page pt-page-2" id="marzo">
+                <div class="overlay">
+                  <div class="container">
+                    <div class="headerback">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <a href="#" class="back" onclick="volvermarzo()">⬅ VOLVER</a>
+                        </div>
+                        <div class="col-lg-4 text-center">
+                          CAMPAÑAS MARZO 2020
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container">
+                      <div class="row listcamp">
+                        <div class="col-lg-2">
+                          <div class="campimg text-center"   onclick="step3('camp/febrero/1/index.html')">
+                            <img src="camp/febrero/1/img/portada.png" alt="" width="">
+                            <p class="subtitle">Día de los Enamorados</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="campimg text-center"   onclick="step3('camp/febrero/2/index.html')">
+                            <img src="camp/febrero/2/img/portada.png" alt="" width="">
+                            <p class="subtitle">Dengue</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="campimg text-center"   onclick="step3('camp/febrero/3/index.html')">
+                            <img src="camp/febrero/3/img/portada.png" alt="" width="">
+                            <p class="subtitle">Votación Línea E</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
 
             <script>
             var mysample = '';
