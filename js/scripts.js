@@ -327,7 +327,8 @@ function volver2(mysample){
 
 
 // step 3
-function step3(url){
+function step3(url,title){
+  $("#titlecamp").text(title);
   document.getElementById('iframepage2').src = url;
   document.getElementById('enero').classList.add("pt-page-moveToLeft");
   document.getElementById('febrero').classList.add("pt-page-moveToLeft");
