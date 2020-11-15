@@ -504,6 +504,10 @@ iframe {
   background-image: url("../img/bgmarzo.jpg");
 }
 
+#abril{
+  background-image: url("../img/bgabril.jpg");
+}
+
 .internal {
     padding-top: 70px;
 }

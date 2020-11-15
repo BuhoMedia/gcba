@@ -203,7 +203,7 @@ function view(){
 
 
 
-// NEWSHIT
+// NUEVO
 
 function gotoenero(mes){
   document.getElementById('page3').style.background = "url(img/" + mes + " )";
@@ -244,6 +244,19 @@ function gotomarzo(mes){
   }, 700);
 }
 
+function gotoabril(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('abril').classList.add("pt-page-current");
+  document.getElementById('abril').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('abril').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -280,6 +293,19 @@ function volvermarzo(){
     document.getElementById('marzo').classList.remove("pt-page-current");
     document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
     document.getElementById('marzo').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+
+function volverabril(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('abril').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('abril').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('abril').classList.remove("pt-page-moveToRight");
   }, 700);
 }
 
@@ -323,6 +349,19 @@ function volver2(mysample){
       document.getElementById('page3').classList.remove("pt-page-moveToRight");
     }, 700);
   }
+
+  if(mysample == "abril"){
+    document.getElementById('abril').classList.add("pt-page-current");
+    document.getElementById('abril').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('abril').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('abril').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
 }
 
 
@@ -333,6 +372,7 @@ function step3(url,title){
   document.getElementById('enero').classList.add("pt-page-moveToLeft");
   document.getElementById('febrero').classList.add("pt-page-moveToLeft");
   document.getElementById('marzo').classList.add("pt-page-moveToLeft");
+  document.getElementById('abril').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -343,6 +383,8 @@ function step3(url,title){
     document.getElementById('febrero').classList.remove("pt-page-moveToLeft");
     document.getElementById('marzo').classList.remove("pt-page-current");
     document.getElementById('marzo').classList.remove("pt-page-moveToLeft");
+    document.getElementById('abril').classList.remove("pt-page-current");
+    document.getElementById('abril').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }
