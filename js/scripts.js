@@ -283,6 +283,21 @@ function gotojunio(mes){
   }, 700);
 }
 
+// goto julio
+function gotojulio(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('julio').classList.add("pt-page-current");
+  document.getElementById('julio').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('julio').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+// fin goto julio
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -361,6 +376,20 @@ function volverjunio(){
   }, 700);
 }
 
+// volver julio
+function volverjulio(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('julio').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('julio').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('julio').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+// fin volver julio
 function volver2(mysample){
 
   if(mysample == "enero"){
@@ -440,6 +469,21 @@ function volver2(mysample){
       document.getElementById('page3').classList.remove("pt-page-moveToRight");
     }, 700);
   }
+
+  // julio
+  if(mysample == "julio"){
+    document.getElementById('julio').classList.add("pt-page-current");
+    document.getElementById('julio').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('julio').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('julio').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
+  // fiun julio
 }
 
 
@@ -453,6 +497,7 @@ function step3(url,title){
   document.getElementById('abril').classList.add("pt-page-moveToLeft");
   document.getElementById('mayo').classList.add("pt-page-moveToLeft");
   document.getElementById('junio').classList.add("pt-page-moveToLeft");
+  document.getElementById('julio').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -469,6 +514,8 @@ function step3(url,title){
     document.getElementById('mayo').classList.remove("pt-page-moveToLeft");
     document.getElementById('junio').classList.remove("pt-page-current");
     document.getElementById('junio').classList.remove("pt-page-moveToLeft");
+    document.getElementById('julio').classList.remove("pt-page-current");
+    document.getElementById('julio').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }
