@@ -520,6 +520,10 @@ iframe {
   background-image: url("../img/bgjulio.jpg");
 }
 
+#agosto{
+  background-image: url("../img/bgagosto.jpg");
+}
+
 .internal {
     padding-top: 70px;
 }

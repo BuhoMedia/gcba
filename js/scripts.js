@@ -298,6 +298,21 @@ function gotojulio(mes){
 }
 // fin goto julio
 
+// goto agosto
+function gotoagosto(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('agosto').classList.add("pt-page-current");
+  document.getElementById('agosto').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('agosto').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+// fin goto agosto
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -390,6 +405,22 @@ function volverjulio(){
   }, 700);
 }
 // fin volver julio
+
+// volver agosto
+function volveragosto(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('agosto').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('agosto').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('agosto').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+// fin volver agosto
+
 function volver2(mysample){
 
   if(mysample == "enero"){
@@ -484,6 +515,22 @@ function volver2(mysample){
     }, 700);
   }
   // fiun julio
+
+  // agosto
+  if(mysample == "agosto"){
+    document.getElementById('agosto').classList.add("pt-page-current");
+    document.getElementById('agosto').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('agosto').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('agosto').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
+  // fiun agosto
+
 }
 
 
@@ -498,6 +545,8 @@ function step3(url,title){
   document.getElementById('mayo').classList.add("pt-page-moveToLeft");
   document.getElementById('junio').classList.add("pt-page-moveToLeft");
   document.getElementById('julio').classList.add("pt-page-moveToLeft");
+  document.getElementById('agosto').classList.add("pt-page-moveToLeft");
+  document.getElementById('agosto').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -516,6 +565,8 @@ function step3(url,title){
     document.getElementById('junio').classList.remove("pt-page-moveToLeft");
     document.getElementById('julio').classList.remove("pt-page-current");
     document.getElementById('julio').classList.remove("pt-page-moveToLeft");
+    document.getElementById('agosto').classList.remove("pt-page-current");
+    document.getElementById('agosto').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }
