@@ -344,6 +344,22 @@ function gotooctubre(mes){
 // fin goto octubre
 
 
+// goto noviembre
+function gotonoviembre(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('noviembre').classList.add("pt-page-current");
+  document.getElementById('noviembre').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('noviembre').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+// fin goto noviembre
+
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -481,6 +497,22 @@ function volveroctubre(){
   }, 700);
 }
 // fin volver octubre
+
+
+// volver noviembre
+function volvernoviembre(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('noviembre').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('noviembre').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('noviembre').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+// fin volver noviembre
 
 function volver2(mysample){
 
@@ -622,6 +654,21 @@ function volver2(mysample){
   }
   // fiun octubre
 
+  // noviembre
+  if(mysample == "noviembre"){
+    document.getElementById('noviembre').classList.add("pt-page-current");
+    document.getElementById('noviembre').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('noviembre').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('noviembre').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
+  // fiun noviembre
+
 }
 
 
@@ -642,6 +689,8 @@ function step3(url,title){
   document.getElementById('septiembre').classList.add("pt-page-moveToLeft");
   document.getElementById('octubre').classList.add("pt-page-moveToLeft");
   document.getElementById('octubre').classList.add("pt-page-moveToLeft");
+  document.getElementById('noviembre').classList.add("pt-page-moveToLeft");
+  document.getElementById('noviembre').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -666,6 +715,8 @@ function step3(url,title){
     document.getElementById('septiembre').classList.remove("pt-page-moveToLeft");
     document.getElementById('octubre').classList.remove("pt-page-current");
     document.getElementById('octubre').classList.remove("pt-page-moveToLeft");
+    document.getElementById('noviembre').classList.remove("pt-page-current");
+    document.getElementById('noviembre').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }
