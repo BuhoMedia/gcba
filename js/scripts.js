@@ -1,3 +1,10 @@
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $("label[for=radiomailing]").text('Directa');
+});
+
+
+
 function disfrute(){
   $( "#page2" ).load( "disfrute.html" );
   $("#ejetitle").text("Disfrute");

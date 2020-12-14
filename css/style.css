@@ -506,6 +506,7 @@ iframe {
 
 #abril{
   background-image: url("../img/bgabril.jpg");
+  overflow-y: scroll;
 }
 
 #mayo{
