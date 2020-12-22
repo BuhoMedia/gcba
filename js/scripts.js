@@ -367,6 +367,22 @@ function gotonoviembre(mes){
 // fin goto noviembre
 
 
+// goto diciembre
+function gotodiciembre(mes){
+  document.getElementById('page3').style.background = "url(img/" + mes + " )";
+  document.getElementById('page1').classList.add("pt-page-moveToLeft");
+  document.getElementById('diciembre').classList.add("pt-page-current");
+  document.getElementById('diciembre').classList.add("pt-page-moveFromRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveToLeft");
+    document.getElementById('diciembre').classList.remove("pt-page-moveFromRight");
+  }, 700);
+}
+// fin goto diciembre
+
+
 function volverenero(){
   document.getElementById('page1').classList.add("pt-page-current");
   document.getElementById('page1').classList.add("pt-page-moveFromLeft");
@@ -520,6 +536,24 @@ function volvernoviembre(){
   }, 700);
 }
 // fin volver noviembre
+
+
+// volver diciembre
+function volverdiciembre(){
+  document.getElementById('page1').classList.add("pt-page-current");
+  document.getElementById('page1').classList.add("pt-page-moveFromLeft");
+  document.getElementById('diciembre').classList.add("pt-page-moveToRight");
+
+  setTimeout(function () {
+    document.getElementById('page1').classList.add("pt-page-current");
+    document.getElementById('diciembre').classList.remove("pt-page-current");
+    document.getElementById('page1').classList.remove("pt-page-moveFromLeft");
+    document.getElementById('diciembre').classList.remove("pt-page-moveToRight");
+  }, 700);
+}
+// fin volver diciembre
+
+
 
 function volver2(mysample){
 
@@ -676,6 +710,21 @@ function volver2(mysample){
   }
   // fiun noviembre
 
+  // diciembre
+  if(mysample == "diciembre"){
+    document.getElementById('diciembre').classList.add("pt-page-current");
+    document.getElementById('diciembre').classList.add("pt-page-moveFromLeft");
+    document.getElementById('page3').classList.add("pt-page-moveToRight");
+
+    setTimeout(function () {
+      document.getElementById('diciembre').classList.add("pt-page-current");
+      document.getElementById('page3').classList.remove("pt-page-current");
+      document.getElementById('diciembre').classList.remove("pt-page-moveFromLeft");
+      document.getElementById('page3').classList.remove("pt-page-moveToRight");
+    }, 700);
+  }
+  // fiun diciembre
+
 }
 
 
@@ -698,6 +747,8 @@ function step3(url,title){
   document.getElementById('octubre').classList.add("pt-page-moveToLeft");
   document.getElementById('noviembre').classList.add("pt-page-moveToLeft");
   document.getElementById('noviembre').classList.add("pt-page-moveToLeft");
+  document.getElementById('diciembre').classList.add("pt-page-moveToLeft");
+  document.getElementById('diciembre').classList.add("pt-page-moveToLeft");
   document.getElementById('page3').classList.add("pt-page-current");
   document.getElementById('page3').classList.add("pt-page-moveFromRight");
 
@@ -724,6 +775,8 @@ function step3(url,title){
     document.getElementById('octubre').classList.remove("pt-page-moveToLeft");
     document.getElementById('noviembre').classList.remove("pt-page-current");
     document.getElementById('noviembre').classList.remove("pt-page-moveToLeft");
+    document.getElementById('diciembre').classList.remove("pt-page-current");
+    document.getElementById('diciembre').classList.remove("pt-page-moveToLeft");
     document.getElementById('page3').classList.remove("pt-page-moveFromRight");
   }, 700);
 }
