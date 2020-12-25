@@ -21,7 +21,7 @@
                 loop:true,
                 keyPress:true
             });
-            $('#vp, #grafica, #radio, #banner').lightSlider({
+            $('#vp, #grafica, #banner').lightSlider({
                 gallery:true,
                 item:1,
                 thumbItem:5,
@@ -32,12 +32,11 @@
                 onSliderLoad: function() {
                     $('#vp').removeClass('cS-hidden');
                     $('#grafica').removeClass('cS-hidden');
-                    $('#radio').removeClass('cS-hidden');
                     $('#banner').removeClass('cS-hidden');
                 }
             });
 
-            $('#subtv, #tv, #byz, #redes, #mailing').lightSlider({
+            $('#subtv, #tv, #byz, #redes,  #radio,  #mailing').lightSlider({
                 gallery:false,
                 item:1,
                 thumbItem:5,
@@ -45,6 +44,7 @@
                     $('#subtv').removeClass('cS-hidden');
                     $('#tv').removeClass('cS-hidden');
                     $('#byz').removeClass('cS-hidden');
+                    $('#radio').removeClass('cS-hidden');
                     $('#redes').removeClass('cS-hidden');
                     $('#mailing').removeClass('cS-hidden');
                 }
